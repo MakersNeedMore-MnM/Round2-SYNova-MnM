@@ -1,0 +1,70 @@
+{
+  "id": "university-scholarship",
+  "name": "University Scholarship Application",
+  "description": "A needs-based scholarship application for enrolled university students.",
+  "updated_at": "2026-09-02",
+  "requirements": [
+    {
+      "id": "registration",
+      "label": "Eligibility information",
+      "detail": "Household income, GPA, residency, and enrollment status",
+      "status": "ready",
+      "required": true
+    },
+    {
+      "id": "tax-return",
+      "label": "Academic eligibility",
+      "detail": "Minimum 3.0 GPA and full-time enrollment are required",
+      "status": "ready",
+      "required": true
+    },
+    {
+      "id": "financials",
+      "label": "Income certificate",
+      "detail": "Valid document for the current academic year",
+      "status": "missing",
+      "required": true
+    },
+    {
+      "id": "lease",
+      "label": "Application form",
+      "detail": "Complete all sections before document verification",
+      "status": "ready",
+      "required": true
+    },
+    {
+      "id": "bank-letter",
+      "label": "Proof of enrollment",
+      "detail": "Current enrollment confirmation from the university",
+      "status": "attention",
+      "required": true
+    }
+  ],
+  "insights": [
+    {
+      "type": "hidden",
+      "title": "Income certificate unlocks submission",
+      "text": "Historical rejection data shows applications without income certificates are frequently rejected before review."
+    },
+    {
+      "type": "dependency",
+      "title": "Eligibility must come first",
+      "text": "The income certificate is checked against the eligibility information before the application can move to verification."
+    }
+  ],
+  "nodes": [
+    { "id": "application", "label": "Application", "step": "01", "kind": "process", "position": { "x": 20, "y": 150 } },
+    { "id": "eligibility", "label": "Eligibility verification", "step": "02", "kind": "requirement", "position": { "x": 235, "y": 150 } },
+    { "id": "income", "label": "Income certificate", "step": "03", "kind": "missing", "position": { "x": 450, "y": 150 } },
+    { "id": "validation", "label": "Document validation", "step": "04", "kind": "requirement", "position": { "x": 665, "y": 150 } },
+    { "id": "bank", "label": "Bank verification", "step": "05", "kind": "requirement", "position": { "x": 880, "y": 150 } },
+    { "id": "submission", "label": "Final submission", "step": "06", "kind": "process", "position": { "x": 1095, "y": 150 } }
+  ],
+  "edges": [
+    { "id": "application-eligibility", "source": "application", "target": "eligibility" },
+    { "id": "eligibility-income", "source": "eligibility", "target": "income" },
+    { "id": "income-validation", "source": "income", "target": "validation" },
+    { "id": "validation-bank", "source": "validation", "target": "bank" },
+    { "id": "bank-submission", "source": "bank", "target": "submission" }
+  ]
+}

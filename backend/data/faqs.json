@@ -1,0 +1,9 @@
+{
+  "process_id": "university-scholarship",
+  "faqs": [
+    { "id": "FAQ-001", "question": "Who needs an income certificate?", "answer": "Applicants requesting need-based funding must provide a current income certificate for the academic year.", "tags": ["eligibility", "income certificate"] },
+    { "id": "FAQ-002", "question": "Can I apply without an income certificate?", "answer": "You may save a draft, but final submission is not accepted until a valid income certificate is uploaded and verified.", "tags": ["submission", "income certificate"] },
+    { "id": "FAQ-003", "question": "Which bank account can be used?", "answer": "Use an active account held in the applicant's legal name. Joint accounts require additional confirmation from Financial Aid.", "tags": ["bank details", "verification"] },
+    { "id": "FAQ-004", "question": "What happens if my certificate is expired?", "answer": "An expired certificate is rejected. Upload a certificate issued for the current academic year before document validation.", "tags": ["document validation", "income certificate"] }
+  ]
+}

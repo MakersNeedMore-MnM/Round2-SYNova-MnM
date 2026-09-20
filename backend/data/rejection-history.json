@@ -1,0 +1,14 @@
+{
+  "process_id": "university-scholarship",
+  "records": [
+    { "id": "REJ-001", "date": "2026-08-03", "reason": "Application rejected because income certificate was missing.", "category": "missing_document", "severity": "blocked" },
+    { "id": "REJ-002", "date": "2026-08-07", "reason": "Application rejected because bank account name did not match applicant.", "category": "document_mismatch", "severity": "blocked" },
+    { "id": "REJ-003", "date": "2026-08-14", "reason": "Application rejected because the submitted income certificate was expired.", "category": "expired_document", "severity": "blocked" },
+    { "id": "REJ-004", "date": "2026-08-19", "reason": "Application rejected because academic records were submitted before eligibility verification.", "category": "invalid_sequence", "severity": "warning" }
+  ],
+  "patterns": [
+    { "pattern": "income_certificate", "rejection_count": 2, "inferred_prerequisite": "A current income certificate is required after eligibility verification." },
+    { "pattern": "bank_name_match", "rejection_count": 1, "inferred_prerequisite": "Bank account holder name must exactly match the applicant." },
+    { "pattern": "eligibility_sequence", "rejection_count": 1, "inferred_prerequisite": "Eligibility verification must complete before academic records are validated." }
+  ]
+}

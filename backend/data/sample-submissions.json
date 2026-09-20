@@ -1,0 +1,10 @@
+{
+  "process_id": "university-scholarship",
+  "submissions": [
+    { "id": "SUB-001", "applicant_type": "Undergraduate student", "eligibility_verified": true, "documents": ["identity_proof", "academic_records", "income_certificate", "bank_details"], "income_certificate_status": "valid", "bank_account_name_matches": true, "status": "pass", "risk_score": 8 },
+    { "id": "SUB-002", "applicant_type": "Undergraduate student", "eligibility_verified": true, "documents": ["identity_proof", "academic_records", "bank_details"], "income_certificate_status": "missing", "bank_account_name_matches": true, "status": "blocked", "missing_requirements": ["income_certificate"], "risk_score": 88 },
+    { "id": "SUB-003", "applicant_type": "Graduate student", "eligibility_verified": true, "documents": ["identity_proof", "academic_records", "income_certificate", "bank_details"], "income_certificate_status": "expired", "bank_account_name_matches": true, "status": "blocked", "missing_requirements": ["current_income_certificate"], "risk_score": 94 },
+    { "id": "SUB-004", "applicant_type": "International student", "eligibility_verified": true, "documents": ["identity_proof", "academic_records", "income_certificate", "bank_details"], "income_certificate_status": "valid", "bank_account_name_matches": false, "status": "warning", "missing_requirements": ["matching_bank_account_name"], "risk_score": 67 },
+    { "id": "SUB-005", "applicant_type": "Undergraduate student", "eligibility_verified": false, "documents": ["identity_proof", "academic_records", "income_certificate"], "income_certificate_status": "valid", "bank_account_name_matches": null, "status": "warning", "missing_requirements": ["eligibility_verification", "bank_details"], "risk_score": 73 }
+  ]
+}

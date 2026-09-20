@@ -1,0 +1,21 @@
+{
+  "process_id": "university-scholarship",
+  "title": "University Scholarship Application",
+  "version": "2026.09",
+  "owner": "Student Financial Aid Office",
+  "effective_date": "2026-08-01",
+  "instructions": [
+    { "step": 1, "name": "Complete scholarship application", "description": "Provide personal, academic, residency, and household financial information." },
+    { "step": 2, "name": "Submit identity proof", "description": "Upload a government-issued identity document matching the applicant name." },
+    { "step": 3, "name": "Submit academic records", "description": "Upload the most recent academic transcript and enrollment information." },
+    { "step": 4, "name": "Submit bank details", "description": "Provide an active bank account for scholarship disbursement." }
+  ],
+  "stated_requirements": [
+    "Completed scholarship application",
+    "Government-issued identity proof",
+    "Most recent academic records",
+    "Active bank account details"
+  ],
+  "submission_window": "Applications are accepted from August 1 through September 30, 2026.",
+  "contact": "financialaid@example.edu"
+}
